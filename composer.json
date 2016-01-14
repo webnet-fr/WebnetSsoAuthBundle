@@ -36,7 +36,7 @@
     "autoload": {
         "psr-0": { "Webnet\\SsoAuthBundle": "" }
     },
-    "target-dir": "Webnet/SsoAuthBundle",
+    "target-dir": "BeSimple/SsoAuthBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
