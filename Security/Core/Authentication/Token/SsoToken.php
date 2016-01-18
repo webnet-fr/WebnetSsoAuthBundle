@@ -1,8 +1,8 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Security\Core\Authentication\Token;
+namespace Webnet\SsoAuthBundle\Security\Core\Authentication\Token;
 
-use BeSimple\SsoAuthBundle\Sso\Manager;
+use Webnet\SsoAuthBundle\Sso\Manager;
 use Symfony\Component\Security\Core\Authentication\Token\AbstractToken;
 
 class SsoToken extends AbstractToken
@@ -27,9 +27,9 @@ class SsoToken extends AbstractToken
 
         $this->manager              = $manager;
         $this->credentials          = $credentials;
-
+        new \CAS_Languages_French();
         $this->setAttribute('sso:validation', $validationAttributes);
-
+        \phpCAS::getVersion();
         if (!is_null($user)) {
             $this->setUser($user);
 
@@ -85,6 +85,7 @@ class SsoToken extends AbstractToken
 
     public function unserialize($str)
     {
+        \phpCAS::getVersion();
         list($this->credentials, $this->manager, $parentStr) = unserialize($str);
         parent::unserialize($parentStr);
     }

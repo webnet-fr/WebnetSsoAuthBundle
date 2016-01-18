@@ -1,13 +1,13 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso;
+namespace Webnet\SsoAuthBundle\Sso;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Buzz\Client\ClientInterface;
-use BeSimple\SsoAuthBundle\Exception\ConfigNotFoundException;
-use BeSimple\SsoAuthBundle\Exception\ServerNotFoundException;
-use BeSimple\SsoAuthBundle\Exception\ProtocolNotFoundException;
+use Webnet\SsoAuthBundle\Exception\ConfigNotFoundException;
+use Webnet\SsoAuthBundle\Exception\ServerNotFoundException;
+use Webnet\SsoAuthBundle\Exception\ProtocolNotFoundException;
 
 /**
  * @author: Jean-François Simon <contact@jfsimon.fr>
@@ -91,11 +91,11 @@ class Factory
      *
      * @return Manager
      *
-     * @throws \BeSimple\SsoAuthBundle\Exception\ConfigNotFoundException
+     * @throws \Webnet\SsoAuthBundle\Exception\ConfigNotFoundException
      */
     private function createManager($id, $checkUrl)
     {
-        $parameter = sprintf('be_simple.sso_auth.manager.%s', $id);
+        $parameter = sprintf('webnet.sso_auth.manager.%s', $id);
 
         if (!$this->container->hasParameter($parameter)) {
             throw new ConfigNotFoundException($id);
@@ -112,7 +112,7 @@ class Factory
      *
      * @return ServerInterface
      *
-     * @throws \BeSimple\SsoAuthBundle\Exception\ServerNotFoundException
+     * @throws \Webnet\SsoAuthBundle\Exception\ServerNotFoundException
      */
     private function getServer(array $config)
     {
@@ -130,7 +130,7 @@ class Factory
      *
      * @return ProtocolInterface
      *
-     * @throws \BeSimple\SsoAuthBundle\Exception\ProtocolNotFoundException
+     * @throws \Webnet\SsoAuthBundle\Exception\ProtocolNotFoundException
      */
     private function getProtocol(array $config)
     {

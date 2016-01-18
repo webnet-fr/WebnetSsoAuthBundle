@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Controller;
+namespace Webnet\SsoAuthBundle\Controller;
 
 use Symfony\Component\DependencyInjection\ContainerAware;
 use Symfony\Component\DependencyInjection\ContainerInterface;

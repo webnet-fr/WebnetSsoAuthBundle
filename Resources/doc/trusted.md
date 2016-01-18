@@ -1,4 +1,4 @@
-BeSimpleSsoAuthBundle trusted SSO configuration
+WebnetSsoAuthBundle trusted SSO configuration
 ===============================================
 
 
@@ -8,9 +8,9 @@ Firewall configuration
 
 **Config entries:**
 
-BeSimpleSsoAuthBundle adds 5 configuration entries to standard (form_login) firewall which are:
+WebnetSsoAuthBundle adds 5 configuration entries to standard (form_login) firewall which are:
 
--   `manager`: name of the manager configured under `be_simple_sso_auth` config section (see below).
+-   `manager`: name of the manager configured under `webnet_sso_auth` config section (see below).
 -   `login_action`: when login required, user is forwarded to this action (which by default tell him to
     follow given link to authenticate). Set to `false` to auto-redirect user to SSO login form.
 -   `logout_action`: same as `login_action`, but for logout.
@@ -42,8 +42,8 @@ Other optional configuration entries are:
                 pattern: ^/admin/.*$
                 trusted_sso:
                     manager: admin_sso
-                    login_action: BeSimpleSsoAuthBundle:TrustedSso:login
-                    logout_action: BeSimpleSsoAuthBundle:TrustedSso:logout
+                    login_action: WebnetSsoAuthBundle:TrustedSso:login
+                    logout_action: WebnetSsoAuthBundle:TrustedSso:logout
                     create_users: true
                     created_users_roles: [ROLE_USER, ROLE_ADMIN]
 
@@ -59,7 +59,7 @@ Now you must configure your `my_manager` manager.
 
     # config.yml
 
-    be_simple_sso_auth:
+    webnet_sso_auth:
         admin_sso:
             protocol:
                 id: cas

@@ -1,7 +1,7 @@
 Authentication through SSO CAS Server with Symfony2
 ===================================================
 
-- use the Bundle : BeSimpleSsoAuthBundle (install with Composer)
+- use the Bundle : WebnetSsoAuthBundle (install with Composer)
 - be careful on dependences : Buzz needs a recent version of libcurl (7.19 ??)
 
 
@@ -10,7 +10,7 @@ Configure SSO
 
 In config.yml:
 
-        be_simple_sso_auth:
+        webnet_sso_auth:
             admin_sso:
                 protocol:
                     id: cas
@@ -32,8 +32,8 @@ Create a firewall
         anonymous: ~
         trusted_sso:
             manager: admin_sso
-            login_action: false 		# BeSimpleSsoAuthBundle:TrustedSso:login
-            logout_action: false 		# BeSimpleSsoAuthBundle:TrustedSso:logout
+            login_action: false 		# WebnetSsoAuthBundle:TrustedSso:login
+            logout_action: false 		# WebnetSsoAuthBundle:TrustedSso:logout
             create_users: true
             created_users_roles: [ROLE_USER ]
             check_path: /
@@ -47,9 +47,9 @@ Create all routes (mandatory even if there is no controller)
         pattern: /login
     logout:
         pattern: /logout
-      
 
-Providers 
+
+Providers
 ---------
 
 Example with Propel:
@@ -75,4 +75,4 @@ If necessary, you can disable SSL Certificate Verification
 This is handy when using a development server that does not have a valid certificate, but it should not be done in production.
 
     # app/config/parameters.yml
-    be_simple.sso_auth.client.option.curlopt_ssl_verifypeer.value: FALSE
+    webnet.sso_auth.client.option.curlopt_ssl_verifypeer.value: FALSE

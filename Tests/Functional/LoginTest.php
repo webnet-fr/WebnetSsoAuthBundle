@@ -1,11 +1,11 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Functional;
+namespace Webnet\SsoAuthBundle\Tests\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Client;
-use BeSimple\SsoAuthBundle\Tests\Controller\TestController;
-use BeSimple\SsoAuthBundle\Tests\Controller\TrustedSsoController;
-use BeSimple\SsoAuthBundle\Tests\Controller\Server\Controller as ServerController;
+use Webnet\SsoAuthBundle\Tests\Controller\TestController;
+use Webnet\SsoAuthBundle\Tests\Controller\TrustedSsoController;
+use Webnet\SsoAuthBundle\Tests\Controller\Server\Controller as ServerController;
 
 class LoginTest extends WebTestCase
 {

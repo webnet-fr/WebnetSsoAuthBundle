@@ -1,10 +1,10 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso;
+namespace Webnet\SsoAuthBundle\Sso;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\BadCredentialsException;
-use BeSimple\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
+use Webnet\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
 use Buzz\Client\ClientInterface;
 
 /**
@@ -13,12 +13,12 @@ use Buzz\Client\ClientInterface;
 class Manager
 {
     /**
-     * @var \BeSimple\SsoAuthBundle\Sso\ServerInterface
+     * @var \Webnet\SsoAuthBundle\Sso\ServerInterface
      */
     private $server;
 
     /**
-     * @var \BeSimple\SsoAuthBundle\Sso\ProtocolInterface
+     * @var \Webnet\SsoAuthBundle\Sso\ProtocolInterface
      */
     private $protocol;
 
@@ -50,7 +50,11 @@ class Manager
      */
     public function validateCredentials($credentials)
     {
-        $request    = $this->server->buildValidationRequest($credentials);
+        if ($this->client  instanceof \Webnet\SsoAuthBundle\Buzz\AdapatativeClient) {
+            $request    = $this->server->buildValidationRequest($credentials);
+        } else {
+            $request = new \Buzz\Message\Request();
+        }
         $validation = $this->protocol->executeValidation($this->client, $request, $credentials);
 
         return $validation;
@@ -61,7 +65,7 @@ class Manager
      *
      * @param \Symfony\Component\HttpFoundation\Request $request
      *
-     * @return \BeSimple\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken
+     * @return \Webnet\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken
      */
     public function createToken(Request $request)
     {
@@ -69,7 +73,7 @@ class Manager
     }
 
     /**
-     * @return \BeSimple\SsoAuthBundle\Sso\ServerInterface
+     * @return \Webnet\SsoAuthBundle\Sso\ServerInterface
      */
     public function getServer()
     {
@@ -77,7 +81,7 @@ class Manager
     }
 
     /**
-     * @return \BeSimple\SsoAuthBundle\Sso\ProtocolInterface
+     * @return \Webnet\SsoAuthBundle\Sso\ProtocolInterface
      */
     public function getProtocol()
     {

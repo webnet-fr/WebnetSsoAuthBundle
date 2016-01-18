@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Security\Core\User;
+namespace Webnet\SsoAuthBundle\Security\Core\User;
 
 /**
  * @author: Sergio Gómez

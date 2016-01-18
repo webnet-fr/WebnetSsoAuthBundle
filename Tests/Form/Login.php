@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Form;
+namespace Webnet\SsoAuthBundle\Tests\Form;
 
 class Login
 {

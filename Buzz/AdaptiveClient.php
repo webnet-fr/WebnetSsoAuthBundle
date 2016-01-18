@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Buzz;
+namespace Webnet\SsoAuthBundle\Buzz;
 
 use Buzz\Client\ClientInterface;
 use Buzz\Client\Curl;

@@ -1,9 +1,9 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso\Cas;
+namespace Webnet\SsoAuthBundle\Sso\Cas;
 
-use BeSimple\SsoAuthBundle\Sso\AbstractValidation;
-use BeSimple\SsoAuthBundle\Sso\ValidationInterface;
+use Webnet\SsoAuthBundle\Sso\AbstractValidation;
+use Webnet\SsoAuthBundle\Sso\ValidationInterface;
 use Buzz\Message\Response;
 
 /**

@@ -1,11 +1,11 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Functional;
+namespace Webnet\SsoAuthBundle\Tests\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Client;
-use BeSimple\SsoAuthBundle\Tests\Functional\WebTestCase;
-use BeSimple\SsoAuthBundle\Tests\Controller\TestController;
-use BeSimple\SsoAuthBundle\Tests\Controller\TrustedSsoController;
+use Webnet\SsoAuthBundle\Tests\Functional\WebTestCase;
+use Webnet\SsoAuthBundle\Tests\Controller\TestController;
+use Webnet\SsoAuthBundle\Tests\Controller\TrustedSsoController;
 
 class AnonTest extends WebTestCase
 {

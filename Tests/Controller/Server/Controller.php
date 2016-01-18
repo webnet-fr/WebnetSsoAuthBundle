@@ -1,13 +1,13 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Controller\Server;
+namespace Webnet\SsoAuthBundle\Tests\Controller\Server;
 
-use BeSimple\SsoAuthBundle\Tests\Controller\Controller as BaseController;
+use Webnet\SsoAuthBundle\Tests\Controller\Controller as BaseController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Templating\TemplateReference;
-use BeSimple\SsoAuthBundle\Tests\Form\Login;
-use BeSimple\SsoAuthBundle\Tests\Form\LoginType;
+use Webnet\SsoAuthBundle\Tests\Form\Login;
+use Webnet\SsoAuthBundle\Tests\Form\LoginType;
 
 abstract class Controller extends BaseController
 {

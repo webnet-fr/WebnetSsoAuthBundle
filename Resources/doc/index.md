@@ -1,4 +1,4 @@
-BeSimpleSsoAuthBundle documentation summary
+WebnetSsoAuthBundle documentation summary
 ===========================================
 
 

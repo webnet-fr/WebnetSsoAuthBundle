@@ -34,9 +34,9 @@
         "symfony/expression-language": "~2.4"
     },
     "autoload": {
-        "psr-0": { "BeSimple\\SsoAuthBundle": "" }
+        "psr-0": { "Webnet\\SsoAuthBundle": "" }
     },
-    "target-dir": "BeSimple/SsoAuthBundle",
+    "target-dir": "Webnet/SsoAuthBundle",
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"

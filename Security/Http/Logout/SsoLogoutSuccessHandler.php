@@ -1,12 +1,12 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Security\Http\Logout;
+namespace Webnet\SsoAuthBundle\Security\Http\Logout;
 
 use Symfony\Component\Security\Http\Logout\LogoutSuccessHandlerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use BeSimple\SsoAuthBundle\Sso\Factory;
+use Webnet\SsoAuthBundle\Sso\Factory;
 
 class SsoLogoutSuccessHandler implements LogoutSuccessHandlerInterface
 {

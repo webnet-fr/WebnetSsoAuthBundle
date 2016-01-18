@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Controller;
+namespace Webnet\SsoAuthBundle\Tests\Controller;
 
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Templating\TemplateReference;
@@ -23,7 +23,7 @@ abstract class Controller
     protected function render($view, array $parameters = array())
     {
         $reference = new TemplateReference($view, 'twig');
-        
+
         return new Response($this->container->get('templating')->render($reference, $parameters));
     }
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Controller;
+namespace Webnet\SsoAuthBundle\Controller;
 
-use BeSimple\SsoAuthBundle\Sso\Manager;
+use Webnet\SsoAuthBundle\Sso\Manager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
@@ -11,7 +11,7 @@ class TrustedSsoController extends Controller
     public function loginAction(Manager $manager, Request $request, AuthenticationException $exception = null)
     {
         return $this->render(
-            'BeSimpleSsoAuthBundle:TrustedSso:login.html.twig',
+            'WebnetSsoAuthBundle:TrustedSso:login.html.twig',
             array(
                 'manager'   => $manager,
                 'request'   => $request,
@@ -23,7 +23,7 @@ class TrustedSsoController extends Controller
     public function logoutAction(Manager $manager, Request $request)
     {
         return $this->render(
-            'BeSimpleSsoAuthBundle:TrustedSso:logout.html.twig',
+            'WebnetSsoAuthBundle:TrustedSso:logout.html.twig',
             array(
                 'manager' => $manager,
                 'request' => $request

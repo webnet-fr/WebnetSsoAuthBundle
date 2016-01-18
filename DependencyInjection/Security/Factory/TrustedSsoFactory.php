@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\DependencyInjection\Security\Factory;
+namespace Webnet\SsoAuthBundle\DependencyInjection\Security\Factory;
 
 use Symfony\Component\DependencyInjection\DefinitionDecorator;
 use Symfony\Component\DependencyInjection\Reference;

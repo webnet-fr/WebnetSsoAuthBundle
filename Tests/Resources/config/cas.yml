@@ -6,8 +6,8 @@ framework:
         resource: "%kernel.root_dir%/Resources/routing/cas.yml"
 
 services:
-    be_simple.sso_auth.server_controller.cas:
-        class: BeSimple\SsoAuthBundle\Tests\Controller\Server\CasController
+    webnet.sso_auth.server_controller.cas:
+        class: Webnet\SsoAuthBundle\Tests\Controller\Server\CasController
         arguments: [@service_container]
 
 security:
@@ -19,12 +19,12 @@ security:
                 manager:       cas
                 login_path:    /login
                 check_path:    /secured/check
-                login_action:  be_simple.sso_auth.test_controller.trusted:loginAction
-                logout_action: be_simple.sso_auth.test_controller.trusted:logoutAction
+                login_action:  webnet.sso_auth.test_controller.trusted:loginAction
+                logout_action: webnet.sso_auth.test_controller.trusted:logoutAction
             logout:
                 path:          /secured/logout
 
-be_simple_sso_auth:
+webnet_sso_auth:
     cas:
         protocol:
             id: cas

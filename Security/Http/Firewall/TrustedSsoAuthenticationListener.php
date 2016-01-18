@@ -1,10 +1,10 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Security\Http\Firewall;
+namespace Webnet\SsoAuthBundle\Security\Http\Firewall;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Http\Firewall\AbstractAuthenticationListener;
-use BeSimple\SsoAuthBundle\Sso\Factory;
+use Webnet\SsoAuthBundle\Sso\Factory;
 
 class TrustedSsoAuthenticationListener extends AbstractAuthenticationListener
 {

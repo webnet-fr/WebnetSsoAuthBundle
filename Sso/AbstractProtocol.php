@@ -1,12 +1,12 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso;
+namespace Webnet\SsoAuthBundle\Sso;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Buzz\Message\Response;
-use BeSimple\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
+use Webnet\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
 
 /**
  * @author: Jean-François Simon <contact@jfsimon.fr>

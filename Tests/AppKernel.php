@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests;
+namespace Webnet\SsoAuthBundle\Tests;
 
 use Symfony\Component\HttpKernel\Util\Filesystem;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -25,7 +25,7 @@ class AppKernel extends Kernel
             new \Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new \Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new \Symfony\Bundle\TwigBundle\TwigBundle(),
-            new \BeSimple\SsoAuthBundle\BeSimpleSsoAuthBundle(),
+            new \Webnet\SsoAuthBundle\WebnetSsoAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

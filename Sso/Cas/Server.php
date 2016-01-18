@@ -1,9 +1,9 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso\Cas;
+namespace Webnet\SsoAuthBundle\Sso\Cas;
 
-use BeSimple\SsoAuthBundle\Sso\AbstractServer;
-use BeSimple\SsoAuthBundle\Sso\ServerInterface;
+use Webnet\SsoAuthBundle\Sso\AbstractServer;
+use Webnet\SsoAuthBundle\Sso\ServerInterface;
 use Buzz\Message\Request;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\DependencyInjection\Security\Factory;
+namespace Webnet\SsoAuthBundle\DependencyInjection\Security\Factory;
 
 use Symfony\Bundle\SecurityBundle\DependencyInjection\Security\Factory\AbstractFactory;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
@@ -17,8 +17,8 @@ abstract class AbstractSsoFactory extends AbstractFactory
     {
         $this->addOption('create_users', false);
         $this->addOption('created_users_roles', array('ROLE_USER'));
-        $this->addOption('login_action', 'BeSimpleSsoAuthBundle:TrustedSso:login');
-        $this->addOption('logout_action', 'BeSimpleSsoAuthBundle:TrustedSso:logout');
+        $this->addOption('login_action', 'WebnetSsoAuthBundle:TrustedSso:login');
+        $this->addOption('logout_action', 'WebnetSsoAuthBundle:TrustedSso:logout');
     }
 
     public function create(ContainerBuilder $container, $id, $config, $userProviderId, $defaultEntryPointId)

@@ -1,10 +1,10 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Controller;
+namespace Webnet\SsoAuthBundle\Tests\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
-use BeSimple\SsoAuthBundle\Sso\Manager;
+use Webnet\SsoAuthBundle\Sso\Manager;
 
 class TrustedSsoController extends Controller
 {

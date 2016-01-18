@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Exception;
+namespace Webnet\SsoAuthBundle\Exception;
 
 /**
  * @author: Jean-François Simon <contact@jfsimon.fr>

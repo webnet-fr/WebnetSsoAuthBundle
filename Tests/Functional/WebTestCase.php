@@ -1,12 +1,12 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Functional;
+namespace Webnet\SsoAuthBundle\Tests\Functional;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase as BaseWebTestCase;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\DomCrawler\Crawler;
-use BeSimple\SsoAuthBundle\Tests\AppKernel;
-use BeSimple\SsoAuthBundle\Tests\HttpClient;
+use Webnet\SsoAuthBundle\Tests\AppKernel;
+use Webnet\SsoAuthBundle\Tests\HttpClient;
 
 /**
  * @method assertEquals
@@ -43,7 +43,7 @@ abstract class WebTestCase extends BaseWebTestCase
 
     static protected function createKernel(array $options = array())
     {
-        static::$tmpPath    = sys_get_temp_dir().'/be_simple_sso_auth_bundle_tests';
+        static::$tmpPath    = sys_get_temp_dir().'/webnet_sso_auth_bundle_tests';
         static::$configFile = __DIR__.'/../Resources/config/'.$options['sso_server_name'].'.yml';
 
         if (file_exists(static::$tmpPath)) {

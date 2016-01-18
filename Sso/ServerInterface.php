@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso;
+namespace Webnet\SsoAuthBundle\Sso;
 
 /**
  * @author: Jean-François Simon <contact@jfsimon.fr>

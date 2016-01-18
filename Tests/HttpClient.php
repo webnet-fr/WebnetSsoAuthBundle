@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests;
+namespace Webnet\SsoAuthBundle\Tests;
 
 use Buzz\Client\ClientInterface;
 use Buzz\Message\RequestInterface as BuzzRequest;

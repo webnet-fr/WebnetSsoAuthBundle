@@ -5,28 +5,35 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="be_simple.sso_auth.factory.class">BeSimple\SsoAuthBundle\Sso\Factory</parameter>
-        <parameter key="be_simple.sso_auth.client.class">BeSimple\SsoAuthBundle\Buzz\AdaptiveClient</parameter>
-        <parameter key="be_simple.sso_auth.client.option.curlopt_ssl_verifypeer.key">64</parameter>
-        <parameter key="be_simple.sso_auth.client.option.curlopt_ssl_verifypeer.value">TRUE</parameter>
-		<parameter key="be_simple.sso_auth.client.option.curlopt_sslversion.key">32</parameter>
-        <parameter key="be_simple.sso_auth.client.option.curlopt_sslversion.value">3</parameter>
-        <parameter key="be_simple.sso_auth.client.option.curlopt_proxy.key">10004</parameter>
-        <parameter key="be_simple.sso_auth.client.option.curlopt_proxy.value"></parameter>
+        <parameter key="webnet.sso_auth.factory.class">Webnet\SsoAuthBundle\Sso\Factory</parameter>
+        <parameter key="webnet.sso_auth.client.class">Webnet\SsoAuthBundle\Buzz\AdaptiveClient</parameter>
+        <parameter key="webnet.sso_auth.client.option.curlopt_ssl_verifypeer.key">64</parameter>
+        <parameter key="webnet.sso_auth.client.option.curlopt_ssl_verifypeer.value">TRUE</parameter>
+		<parameter key="webnet.sso_auth.client.option.curlopt_sslversion.key">32</parameter>
+        <parameter key="webnet.sso_auth.client.option.curlopt_sslversion.value">3</parameter>
+        <parameter key="webnet.sso_auth.client.option.curlopt_proxy.key">10004</parameter>
+        <parameter key="webnet.sso_auth.client.option.curlopt_proxy.value"></parameter>
+        <parameter key="webnet.sso_auth.client.option.cas_host.value"></parameter>
+        <parameter key="webnet.sso_auth.client.option.cas_port.value"></parameter>
+        <parameter key="webnet.sso_auth.client.option.cas_context.value"></parameter>
     </parameters>
 
     <services>
-        <service id="be_simple.sso_auth.client" class="%be_simple.sso_auth.client.class%">
+        <service id="webnet.sso_auth.client" class="%webnet.sso_auth.client.class%">
             <argument type="collection">
-                <argument key="%be_simple.sso_auth.client.option.curlopt_ssl_verifypeer.key%">%be_simple.sso_auth.client.option.curlopt_ssl_verifypeer.value%</argument>
-				<argument key="%be_simple.sso_auth.client.option.curlopt_sslversion.key%">%be_simple.sso_auth.client.option.curlopt_sslversion.value%</argument>
-                <argument key="%be_simple.sso_auth.client.option.curlopt_proxy.key%">%be_simple.sso_auth.client.option.curlopt_proxy.value%</argument>
+                <argument key="%webnet.sso_auth.client.option.curlopt_ssl_verifypeer.key%">%webnet.sso_auth.client.option.curlopt_ssl_verifypeer.value%</argument>
+				<argument key="%webnet.sso_auth.client.option.curlopt_sslversion.key%">%webnet.sso_auth.client.option.curlopt_sslversion.value%</argument>
+                <argument key="%webnet.sso_auth.client.option.curlopt_proxy.key%">%webnet.sso_auth.client.option.curlopt_proxy.value%</argument>
+                <argument key="webnet.sso_auth.client.option.cas_host.value">%webnet.sso_auth.client.option.cas_host.value%</argument>
+                <argument key="webnet.sso_auth.client.option.cas_port.value">%webnet.sso_auth.client.option.cas_port.value%</argument>
+                <argument key="webnet.sso_auth.client.option.cas_context.value">%webnet.sso_auth.client.option.cas_context.value%</argument>
+                <argument key="webnet.sso_auth.client.option.curlopt_ssl_verifypeer.value">%webnet.sso_auth.client.option.curlopt_ssl_verifypeer.value%</argument>
             </argument>
         </service>
 
-        <service id="be_simple.sso_auth.factory" class="%be_simple.sso_auth.factory.class%">
+        <service id="webnet.sso_auth.factory" class="%webnet.sso_auth.factory.class%">
             <argument type="service" id="service_container" />
-            <argument type="service" id="be_simple.sso_auth.client" />
+            <argument type="service" id="webnet.sso_auth.client" />
         </service>
     </services>
 </container>

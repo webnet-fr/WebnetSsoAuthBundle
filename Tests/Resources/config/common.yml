@@ -13,14 +13,14 @@ framework:
 services:
     logger:
         class: Symfony\Component\HttpKernel\Log\NullLogger
-    be_simple.sso_auth.test_controller.test:
-        class: BeSimple\SsoAuthBundle\Tests\Controller\TestController
+    webnet.sso_auth.test_controller.test:
+        class: Webnet\SsoAuthBundle\Tests\Controller\TestController
         arguments: [@service_container]
-    be_simple.sso_auth.test_controller.trusted:
-        class: BeSimple\SsoAuthBundle\Tests\Controller\TrustedSsoController
+    webnet.sso_auth.test_controller.trusted:
+        class: Webnet\SsoAuthBundle\Tests\Controller\TrustedSsoController
         arguments: [@service_container]
-    be_simple.sso_auth.client:
-        class: BeSimple\SsoAuthBundle\Tests\HttpClient
+    webnet.sso_auth.client:
+        class: Webnet\SsoAuthBundle\Tests\HttpClient
 
 twig:
     debug:            %kernel.debug%

@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\DependencyInjection;
+namespace Webnet\SsoAuthBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\NodeInterface;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -33,7 +33,7 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
 
         $serverDefinition = $treeBuilder
-            ->root('be_simple_sso_auth')
+            ->root('webnet_sso_auth')
             ->fixXmlConfig('provider')
             ->useAttributeAsKey('id')
             ->prototype('array');

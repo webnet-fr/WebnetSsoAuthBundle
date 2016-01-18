@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\DependencyInjection;
+namespace Webnet\SsoAuthBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
@@ -11,7 +11,7 @@ use Symfony\Component\Config\FileLocator;
 /**
  * @author: Jean-François Simon <contact@jfsimon.fr>
  */
-class BeSimpleSsoAuthExtension extends Extension
+class WebnetSsoAuthExtension extends Extension
 {
     public function load(array $config, ContainerBuilder $container)
     {
@@ -19,7 +19,7 @@ class BeSimpleSsoAuthExtension extends Extension
         $providers = $processor->processConfiguration(new Configuration($container->getParameter('kernel.debug')), $config);
 
         foreach ($providers as $id => $provider) {
-            $container->setParameter(sprintf('be_simple.sso_auth.manager.%s', $id), $provider);
+            $container->setParameter(sprintf('webnet.sso_auth.manager.%s', $id), $provider);
         }
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));

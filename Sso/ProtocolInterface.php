@@ -1,9 +1,9 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso;
+namespace Webnet\SsoAuthBundle\Sso;
 
-use BeSimple\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
-use BeSimple\SsoAuthBundle\Exception\InvalidConfigurationException;
+use Webnet\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
+use Webnet\SsoAuthBundle\Exception\InvalidConfigurationException;
 use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
 use Buzz\Message\Request as BuzzRequest;
 use Buzz\Client\ClientInterface;
@@ -16,7 +16,7 @@ interface ProtocolInterface extends ComponentInterface
     /**
      * Processes internal logout operations.
      *
-     * @param \BeSimple\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken $token
+     * @param \Webnet\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken $token
      *
      * @return void
      */
@@ -52,7 +52,7 @@ interface ProtocolInterface extends ComponentInterface
      *
      * @return ValidationInterface A validation object
      *
-     * @throws \BeSimple\SsoAuthBundle\Exception\InvalidConfigurationException
+     * @throws \Webnet\SsoAuthBundle\Exception\InvalidConfigurationException
      */
     public function executeValidation(ClientInterface $client, BuzzRequest $request, $credentials);
 }

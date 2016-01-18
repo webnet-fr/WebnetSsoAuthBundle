@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Security\Core\Authentication\Provider;
+namespace Webnet\SsoAuthBundle\Security\Core\Authentication\Provider;
 
 use Symfony\Component\Security\Core\Authentication\Provider\AuthenticationProviderInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
@@ -10,10 +10,10 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\Exception\AuthenticationServiceException;
 use Symfony\Component\Security\Core\Exception\BadCredentialsException;
-use BeSimple\SsoAuthBundle\Sso\Manager;
-use BeSimple\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
-use BeSimple\SsoAuthBundle\Sso\ValidationInterface;
-use BeSimple\SsoAuthBundle\Security\Core\User\UserFactoryInterface;
+use Webnet\SsoAuthBundle\Sso\Manager;
+use Webnet\SsoAuthBundle\Security\Core\Authentication\Token\SsoToken;
+use Webnet\SsoAuthBundle\Sso\ValidationInterface;
+use Webnet\SsoAuthBundle\Security\Core\User\UserFactoryInterface;
 
 class SsoAuthenticationProvider implements AuthenticationProviderInterface
 {

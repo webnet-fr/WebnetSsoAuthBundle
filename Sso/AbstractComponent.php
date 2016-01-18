@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Sso;
+namespace Webnet\SsoAuthBundle\Sso;
 
 /**
  * @author: Jean-François Simon <contact@jfsimon.fr>
@@ -35,7 +35,7 @@ abstract class AbstractComponent implements ComponentInterface
      *
      * @param array $config
      *
-     * @return \BeSimple\SsoAuthBundle\Sso\AbstractComponent
+     * @return \Webnet\SsoAuthBundle\Sso\AbstractComponent
      */
     public function setConfig(array $config)
     {

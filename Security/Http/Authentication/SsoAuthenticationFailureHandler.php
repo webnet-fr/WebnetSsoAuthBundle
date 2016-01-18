@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Security\Http\Authentication;
+namespace Webnet\SsoAuthBundle\Security\Http\Authentication;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

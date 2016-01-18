@@ -1,13 +1,13 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Security\Http\EntryPoint;
+namespace Webnet\SsoAuthBundle\Security\Http\EntryPoint;
 
 use Symfony\Component\Security\Http\EntryPoint\AuthenticationEntryPointInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use BeSimple\SsoAuthBundle\Sso\Factory;
+use Webnet\SsoAuthBundle\Sso\Factory;
 
 class TrustedSsoAuthenticationEntryPoint implements AuthenticationEntryPointInterface
 {

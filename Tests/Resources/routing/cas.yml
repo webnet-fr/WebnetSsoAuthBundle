@@ -3,12 +3,12 @@ _common:
 
 server_login:
     pattern:  /server/login
-    defaults: { _controller: be_simple.sso_auth.server_controller.cas:loginAction }
+    defaults: { _controller: webnet.sso_auth.server_controller.cas:loginAction }
 
 server_validation:
     pattern:  /server/validation
-    defaults: { _controller: be_simple.sso_auth.server_controller.cas:validationAction, version: 2 }
+    defaults: { _controller: webnet.sso_auth.server_controller.cas:validationAction, version: 2 }
 
 server_logout:
     pattern:  /server/logout
-    defaults: { _controller: be_simple.sso_auth.server_controller.cas:logoutAction }
+    defaults: { _controller: webnet.sso_auth.server_controller.cas:logoutAction }

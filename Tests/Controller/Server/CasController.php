@@ -1,9 +1,9 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Controller\Server;
+namespace Webnet\SsoAuthBundle\Tests\Controller\Server;
 
 use Symfony\Component\HttpFoundation\Request;
-use BeSimple\SsoAuthBundle\Tests\Form\Login;
+use Webnet\SsoAuthBundle\Tests\Form\Login;
 
 class CasController extends Controller
 {

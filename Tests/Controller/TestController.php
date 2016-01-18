@@ -1,6 +1,6 @@
 <?php
 
-namespace BeSimple\SsoAuthBundle\Tests\Controller;
+namespace Webnet\SsoAuthBundle\Tests\Controller;
 
 class TestController extends Controller
 {

@@ -1,4 +1,4 @@
-Get started with BeSimpleSsoAuthBundle
+Get started with WebnetSsoAuthBundle
 ======================================
 
 
@@ -12,11 +12,11 @@ Add the requirement in your `composer.json` file:
 
     {
         "require": {
-            "besimple/sso-auth-bundle": "*"
+            "webnet/sso-auth-bundle": "*"
         }
     }
 
-Then run `composer update besimple/sso-auth-bundle`.
+Then run `composer update Webnet/sso-auth-bundle`.
 
 Enable bundle & dependency
 --------------------------
@@ -27,7 +27,7 @@ Add bundle to your kernel class:
     // app/AppKernel.php
     $bundles = array(
         // ...
-        new BeSimple\SsoAuthBundle\BeSimpleSsoAuthBundle(),
+        new Webnet\SsoAuthBundle\WebnetSsoAuthBundle(),
         // ...
     );
 
@@ -35,4 +35,4 @@ Add bundle to your kernel class:
 Add bundle to your config file:
 
     # app/config/config.yml
-    be_simple_sso_auth: ~
+    webnet_sso_auth: ~

@@ -5,17 +5,17 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="be_simple.sso_auth.protocol.cas.class">BeSimple\SsoAuthBundle\Sso\Cas\Protocol</parameter>
-        <parameter key="be_simple.sso_auth.server.cas.class">BeSimple\SsoAuthBundle\Sso\Cas\Server</parameter>
+        <parameter key="webnet.sso_auth.protocol.cas.class">Webnet\SsoAuthBundle\Sso\Cas\Protocol</parameter>
+        <parameter key="webnet.sso_auth.server.cas.class">Webnet\SsoAuthBundle\Sso\Cas\Server</parameter>
     </parameters>
 
     <services>
-        <service id="be_simple.sso_auth.protocol.cas" class="%be_simple.sso_auth.protocol.cas.class%">
-            <tag name="be_simple.sso_auth.protocol" id="cas" />
+        <service id="webnet.sso_auth.protocol.cas" class="%webnet.sso_auth.protocol.cas.class%">
+            <tag name="webnet.sso_auth.protocol" id="cas" />
         </service>
 
-        <service id="be_simple.sso_auth.server.cas" class="%be_simple.sso_auth.server.cas.class%">
-            <tag name="be_simple.sso_auth.server" id="cas" />
+        <service id="webnet.sso_auth.server.cas" class="%webnet.sso_auth.server.cas.class%">
+            <tag name="webnet.sso_auth.server" id="cas" />
         </service>
     </services>
 </container>
