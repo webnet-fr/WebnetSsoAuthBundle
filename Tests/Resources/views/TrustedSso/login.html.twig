@@ -1,0 +1,16 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    <h1>You need to authenticate</h1>
+
+    {% if exception %}
+        <p class="warning">{{ exception.message }}</p>
+    {% endif %}
+
+    <p class="notice">
+        Follow this link to authenticate with external server :
+        <a href="{{ manager.server.loginUrl }}">{{ manager.server.loginUrl }}</a>.
+    </p>
+
+{% endblock body %}

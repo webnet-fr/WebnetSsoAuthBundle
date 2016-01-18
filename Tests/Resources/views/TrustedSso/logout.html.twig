@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    <h1>You're about to logout</h1>
+
+    <p class="notice">
+        Follow this link to logout from external server :
+        <a href="{{ manager.server.logoutUrl }}">{{ manager.server.logoutUrl }}</a>.
+    </p>
+
+{% endblock body %}

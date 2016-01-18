@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="security.authentication.trusted_sso_entry_point.class">BeSimple\SsoAuthBundle\Security\Http\EntryPoint\TrustedSsoAuthenticationEntryPoint</parameter>
+        <parameter key="security.authentication.provider.sso.class">BeSimple\SsoAuthBundle\Security\Core\Authentication\Provider\SsoAuthenticationProvider</parameter>
+        <parameter key="security.authentication.listener.trusted_sso.class">BeSimple\SsoAuthBundle\Security\Http\Firewall\TrustedSsoAuthenticationListener</parameter>
+        <parameter key="security.logout.handler.sso.class">BeSimple\SsoAuthBundle\Security\Http\Logout\SsoLogoutHandler</parameter>
+        <parameter key="security.logout.sso_success_handler.class">BeSimple\SsoAuthBundle\Security\Http\Logout\SsoLogoutSuccessHandler</parameter>
+        <parameter key="security.authentication.sso_authentication_failure_handler.class">BeSimple\SsoAuthBundle\Security\Http\Authentication\SsoAuthenticationFailureHandler</parameter>
+        <parameter key="security.authentication.hide_user_not_found">FALSE</parameter>
+    </parameters>
+
+    <services>
+        <service id="security.authentication.trusted_sso_entry_point" class="%security.authentication.trusted_sso_entry_point.class%" abstract="true" public="false">
+            <argument type="service" id="http_kernel" />
+            <argument type="service" id="be_simple.sso_auth.factory" />
+            <!-- $ssoProviderFactoryConfig -->
+        </service>
+
+        <service id="security.authentication.provider.sso" class="%security.authentication.provider.sso.class%" abstract="true" public="false">
+            <argument /><!-- $userProvider -->
+            <argument type="service" id="security.user_checker" />
+            <argument/><!-- $createUsers -->
+            <argument/><!-- $createdUsersRoles -->
+            <argument>%security.authentication.hide_user_not_found%</argument>
+        </service>
+
+        <service id="security.logout.handler.sso" class="%security.logout.handler.sso.class%" public="false" />
+
+        <service id="security.logout.sso.success_handler" class="%security.logout.sso_success_handler.class%" abstract="true">
+            <argument type="service" id="http_kernel" />
+            <argument type="service" id="be_simple.sso_auth.factory" />
+            <!-- $ssoProviderFactoryConfig -->
+        </service>
+
+        <service id="security.authentication.listener.trusted_sso" class="%security.authentication.listener.trusted_sso.class%" abstract="true" public="false" parent="security.authentication.listener.abstract">
+            <tag name="monolog.logger" channel="security" />
+            <call method="setFactory">
+                <argument type="service" id="be_simple.sso_auth.factory" />
+            </call>
+        </service>
+
+        <service id="security.authentication.sso.authentication_failure_handler" class="%security.authentication.sso_authentication_failure_handler.class%" abstract="false">
+            <argument type="service" id="templating" />
+        </service>
+    </services>
+</container>
