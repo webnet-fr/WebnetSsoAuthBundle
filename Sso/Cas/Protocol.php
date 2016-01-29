@@ -46,5 +46,4 @@ class Protocol extends AbstractProtocol
 
         throw new InvalidConfigurationException('Version should either be 1, 2 or 3.');
     }
-
 }
