@@ -17,6 +17,7 @@ This plugin is a based on BeSimpleSsoAuthBundle.
 It only adds the ability to connect to CAS using the SAML_VERSION_1_1 for CAS
 
 In order to activate this mode, use the following configuration:
+```
 webnet_sso_auth:
     provider_id:
         protocol:
@@ -33,7 +34,7 @@ paramerters:
     webnet.sso_auth.client.option.cas_context.value: [CAS_CONTEXT] #usually '/cas'
     webnet.sso_auth.client.class: Webnet\SsoAuthBundle\Buzz\CasClient
     webnet.sso_auth.protocol.cas.class: Webnet\SsoAuthBundle\Sso\Cas\SamlProtocol
-
+```
 
 -   [Read documentation](https://github.com/BeSimple/BeSimpleSsoAuthBundle/blob/master/Resources/doc/index.md)
 -   [See the license](https://github.com/BeSimple/BeSimpleSsoAuthBundle/blob/master/Resources/meta/LICENSE)
