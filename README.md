@@ -12,7 +12,7 @@ It works in two ways:
 
 Only CAS protocol is implemented for now, many other are planned.
 
-This plugin is a based on BeSimpleSsoAuthBundle.
+This plugin is based on BeSimpleSsoAuthBundle.
 
 It only adds the ability to connect to CAS using the SAML_VERSION_1_1 for CAS
 
