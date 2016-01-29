@@ -36,5 +36,5 @@ paramerters:
     webnet.sso_auth.protocol.cas.class: Webnet\SsoAuthBundle\Sso\Cas\SamlProtocol
 ```
 
--   [Read documentation](https://github.com/BeSimple/BeSimpleSsoAuthBundle/blob/master/Resources/doc/index.md)
--   [See the license](https://github.com/BeSimple/BeSimpleSsoAuthBundle/blob/master/Resources/meta/LICENSE)
+-   [Read documentation](https://github.com/webnet-fr/WebnetSsoAuthBundle/blob/master/Resources/doc/index.md)
+-   [See the license](https://github.com/webnet-fr/WebnetSsoAuthBundle/blob/master/Resources/meta/LICENSE)
