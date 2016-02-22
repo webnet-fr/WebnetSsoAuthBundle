@@ -36,8 +36,12 @@ class CasClient implements ClientInterface
 
     public function send(RequestInterface $request, MessageInterface $response)
     {
-        $this->client->forceAuthentication();
-        $response->setContent(serialize($_SESSION['phpCAS']));
+        try {
+            $this->client->forceAuthentication();
+            $response->setContent(serialize($_SESSION['phpCAS']));
+        } catch (\CAS_AuthenticationException $e) {
+
+        }
     }
 
 }
