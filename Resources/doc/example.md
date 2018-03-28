@@ -19,6 +19,7 @@ In config.yml:
                     id: cas
                     login_url: https://cas.server.tld/login
                     logout_url: https://cas.server.tld/logout
+                    logout_target: '%logout_target_url%'
                     validation_url: https://cas.server.tld/serviceValidate
 
 
