@@ -20,6 +20,7 @@
 
     <services>
         <service id="webnet.sso_auth.client" class="%webnet.sso_auth.client.class%">
+            <argument type="service" id="session" />
             <argument type="collection">
                 <argument key="%webnet.sso_auth.client.option.curlopt_ssl_verifypeer.key%">%webnet.sso_auth.client.option.curlopt_ssl_verifypeer.value%</argument>
 				<argument key="%webnet.sso_auth.client.option.curlopt_sslversion.key%">%webnet.sso_auth.client.option.curlopt_sslversion.value%</argument>

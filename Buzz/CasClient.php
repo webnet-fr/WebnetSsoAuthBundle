@@ -12,6 +12,7 @@ use Buzz\Client\ClientInterface;
 use Buzz\Exception\ClientException;
 use Buzz\Message\MessageInterface;
 use Buzz\Message\RequestInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
  * Class CasClient
@@ -28,13 +29,18 @@ class CasClient implements ClientInterface
      *
      * @param array $options
      */
-    public function __construct(array $options = array())
+    public function __construct(SessionInterface $session, array $options = array())
     {
         $this->options = $options;
         \phpCAS::getVersion();
 
         // Désactivé car trop verbeux pour la production...
         // \phpCAS::setDebug('/tmp/cas-log.log');
+
+        // Start session
+        if (!$session->isStarted()) {
+            $session->start();
+        }
 
         \phpCAS::setVerbose(true);
         $this->client = new \CAS_Client(
