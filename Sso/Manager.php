@@ -34,7 +34,7 @@ class Manager
      * @param ProtocolInterface            $protocol
      * @param \Buzz\Client\ClientInterface $client
      */
-    public function __construct(ServerInterface $server, ProtocolInterface $protocol, ClientInterface $client)
+    public function __construct(ServerInterface $server, ProtocolInterface $protocol, $client)
     {
         $this->server   = $server;
         $this->protocol = $protocol;

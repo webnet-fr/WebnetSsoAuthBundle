@@ -10,11 +10,11 @@
     </parameters>
 
     <services>
-        <service id="webnet.sso_auth.protocol.cas" class="%webnet.sso_auth.protocol.cas.class%">
+        <service id="webnet.sso_auth.protocol.cas" class="%webnet.sso_auth.protocol.cas.class%" public="true">
             <tag name="webnet.sso_auth.protocol" id="cas" />
         </service>
 
-        <service id="webnet.sso_auth.server.cas" class="%webnet.sso_auth.server.cas.class%">
+        <service id="webnet.sso_auth.server.cas" class="%webnet.sso_auth.server.cas.class%" public="true">
             <tag name="webnet.sso_auth.server" id="cas" />
         </service>
     </services>
